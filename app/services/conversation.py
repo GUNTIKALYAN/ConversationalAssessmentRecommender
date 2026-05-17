@@ -61,7 +61,11 @@ class ConversationManager:
         if any(word in text for word in [
             "graduate",
             "entry level",
-            "fresher"
+            "fresher",
+            "intern",
+            "student",
+            "campus hire",
+            "college"
         ]):
             session["seniority"] = "entry-level"
 
