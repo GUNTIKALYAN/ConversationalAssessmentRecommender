@@ -99,8 +99,12 @@ class ConversationManager:
 
         for role in role_patterns:
 
-            if role in text and role not in session["skills"]:
-                session["skills"].append(role)
+            role_words = role.split()
+            
+            if all(word in text for word in role_words):
+
+                if role not in session["skills"]:
+                    session["skills"].append(role)
 
         return session
 
